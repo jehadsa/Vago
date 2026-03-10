@@ -20,28 +20,8 @@
                 </div>
             </div>
             
-            <div class="user-actions">
-                <!-- زر القائمة الجانبية (يظهر فقط في الموبايل) -->
-                <div class="menu-toggle" id="menuToggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                
-                <!-- زر تغيير اللغة -->
-                <div class="language-switcher">
-                    <button class="lang-btn active" onclick="changeLanguage('ar')" id="lang-ar">
-                        <i class="fas fa-globe"></i> AR
-                    </button>
-                    <button class="lang-btn" onclick="changeLanguage('en')" id="lang-en">
-                        <i class="fas fa-globe"></i> EN
-                    </button>
-                </div>
-                
-                <div class="user-icon">🔔</div>
-                <div class="user-icon">👤</div>
-                <div class="user-icon">❤️</div>
-            </div>
+            <!-- حاوية user-actions ستتم تعبئتها بواسطة JavaScript -->
+            <div class="user-actions" id="userActions"></div>
         </div>
         
         <!-- القائمة الجانبية للجوال -->
@@ -683,31 +663,5 @@
     </footer>
 
     <script src="script.js"></script>
-    <script>
-        // JavaScript للقائمة الجانبية
-        const menuToggle = document.getElementById('menuToggle');
-        const sidebarMenu = document.getElementById('sidebarMenu');
-        const sidebarOverlay = document.getElementById('sidebarOverlay');
-        const closeSidebar = document.getElementById('closeSidebar');
-
-        function openSidebar() {
-            sidebarMenu.classList.add('active');
-            sidebarOverlay.classList.add('active');
-            document.body.style.overflow = 'hidden'; // منع التمرير
-        }
-
-        function closeSidebarFunc() {
-            sidebarMenu.classList.remove('active');
-            sidebarOverlay.classList.remove('active');
-            document.body.style.overflow = ''; // إعادة التمرير
-        }
-
-        menuToggle.addEventListener('click', openSidebar);
-        closeSidebar.addEventListener('click', closeSidebarFunc);
-        sidebarOverlay.addEventListener('click', closeSidebarFunc);
-
-        // إغلاق القائمة عند النقر على رابط
-        window.closeSidebar = closeSidebarFunc;
-    </script>
 </body>
 </html>
