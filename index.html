@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Vago - السفر والسياحة</title>
     <!-- ربط ملف CSS -->
@@ -23,6 +23,13 @@
                 </div>
             </div>
             
+            <!-- زر الهامبورجر للموبايل -->
+            <button class="hamburger-menu" id="hamburgerBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
             <div class="user-actions">
                 <!-- زر تغيير اللغة -->
                 <div class="language-switcher">
@@ -39,8 +46,8 @@
             </div>
         </div>
         
-        <!-- قائمة التنقل مع روابط تمرير للأقسام الجديدة -->
-        <nav>
+        <!-- قائمة التنقل -->
+        <nav id="mainNav">
             <ul>
                 <li><span class="nav-icon">🏠</span><a href="#home">الرئيسية</a></li>
                 <li><span class="nav-icon">🏨</span><a href="#hotels">حجز فندق</a></li>
@@ -55,7 +62,7 @@
         </nav>
     </header>
 
-    <!-- قسم المحتوى الرئيسي -->
+    <!-- باقي المحتوى (نفس الأكواد القديمة) -->
     <main>
         <!-- hero-section -->
         <div id="home" class="hero-section-alt">
@@ -69,7 +76,7 @@
         <div id="hotels" class="offers-section">
             <h2 class="section-title">🏨 عروض الفنادق المميزة</h2>
             <div class="cards-container">
-                <!-- بطاقات الفنادق (كما هي) -->
+                <!-- بطاقات الفنادق -->
                 <div class="card">
                     <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
                         <div class="card-badge">خصم 30%</div>
@@ -136,7 +143,7 @@
         <div id="cars" class="offers-section">
             <h2 class="section-title">🚗 عروض تأجير السيارات</h2>
             <div class="cards-container">
-                <!-- بطاقات السيارات (كما هي) -->
+                <!-- بطاقات السيارات -->
                 <div class="card">
                     <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
                         <div class="card-badge">اقتصادية</div>
@@ -199,11 +206,11 @@
             </div>
         </div>
 
-        <!-- قسم جديد: خدمات التكسي (شوفير خاص) -->
+        <!-- قسم جديد: خدمات التكسي -->
         <div id="taxi" class="offers-section">
             <h2 class="section-title">🚕 خدمات التكسي والشوفير الخاص</h2>
             <div class="cards-container">
-                <!-- بطاقة تكسي مطار دمشق -->
+                <!-- بطاقة تكسي مطار -->
                 <div class="card">
                     <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1581262177466-4523b6426c81?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
                         <div class="card-badge">خدمة 24/7</div>
@@ -224,7 +231,7 @@
                     </div>
                 </div>
 
-                <!-- بطاقة شوفير خاص ليوم كامل -->
+                <!-- بطاقة شوفير خاص -->
                 <div class="card">
                     <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1558976825-f12d4cd2bccf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
                         <div class="card-badge">شامل</div>
@@ -245,7 +252,7 @@
                     </div>
                 </div>
 
-                <!-- بطاقة تكسي فاخر ليموزين -->
+                <!-- بطاقة تكسي فاخر -->
                 <div class="card">
                     <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1563720360172-67b8f3dce741?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
                         <div class="card-badge">فاخر</div>
@@ -268,11 +275,11 @@
             </div>
         </div>
 
-        <!-- قسم جديد: المطاعم -->
+        <!-- قسم المطاعم -->
         <div id="restaurants" class="offers-section">
             <h2 class="section-title">🍽️ أشهر المطاعم في سوريا</h2>
             <div class="cards-container">
-                <!-- مطعم أندلسية دمشق -->
+                <!-- مطعم أندلسية -->
                 <div class="card">
                     <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
                         <div class="card-badge">شعبي</div>
@@ -293,7 +300,7 @@
                     </div>
                 </div>
 
-                <!-- مطعم الشرق حلب -->
+                <!-- مطعم الشرق -->
                 <div class="card">
                     <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1552566624-52f8b3ae6fd4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
                         <div class="card-badge">حائز على نجمة</div>
@@ -314,7 +321,7 @@
                     </div>
                 </div>
 
-                <!-- مطعم البحر اللاذقية -->
+                <!-- مطعم البحر -->
                 <div class="card">
                     <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
                         <div class="card-badge">أسماك طازجة</div>
@@ -334,69 +341,6 @@
                         <button class="card-button">احجز طاولة</button>
                     </div>
                 </div>
-
-                <!-- مطعم البوابة طرطوس -->
-                <div class="card">
-                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
-                        <div class="card-badge">رومانسي</div>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="card-title">مطعم البوابة</h3>
-                        <div class="card-subtitle">📍 شاطئ الشاطئ الأزرق، طرطوس</div>
-                        <div class="card-details">
-                            <div class="card-price">$30 <small>/ للشخص</small></div>
-                            <div class="card-rating">★★★★★ 4.8</div>
-                        </div>
-                        <div class="card-features">
-                            <span>🍝 مأكولات إيطالية</span>
-                            <span>🕯️ إضاءة هادئة</span>
-                            <span>🎻 عروض موسيقية</span>
-                        </div>
-                        <button class="card-button">احجز طاولة</button>
-                    </div>
-                </div>
-
-                <!-- مطعم القلعة حمص -->
-                <div class="card">
-                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1544148103-0773bf10d330?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
-                        <div class="card-badge">تراثي</div>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="card-title">مطعم القلعة</h3>
-                        <div class="card-subtitle">📍 قلعة حمص</div>
-                        <div class="card-details">
-                            <div class="card-price">$20 <small>/ للشخص</small></div>
-                            <div class="card-rating">★★★★☆ 4.5</div>
-                        </div>
-                        <div class="card-features">
-                            <span>🏺 ديكور تراثي</span>
-                            <span>🥣 مأكولات تقليدية</span>
-                            <span>🪑 جلسات عربية</span>
-                        </div>
-                        <button class="card-button">احجز طاولة</button>
-                    </div>
-                </div>
-
-                <!-- مطعم السفاري درعا -->
-                <div class="card">
-                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
-                        <div class="card-badge">حديقة</div>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="card-title">مطعم السفاري</h3>
-                        <div class="card-subtitle">📍 بصرى الشام، درعا</div>
-                        <div class="card-details">
-                            <div class="card-price">$22 <small>/ للشخص</small></div>
-                            <div class="card-rating">★★★★☆ 4.4</div>
-                        </div>
-                        <div class="card-features">
-                            <span>🌳 حديقة واسعة</span>
-                            <span>👨‍👩‍👧‍👦 مناسب للعائلات</span>
-                            <span>🍖 مشاوي على الفحم</span>
-                        </div>
-                        <button class="card-button">احجز طاولة</button>
-                    </div>
-                </div>
             </div>
         </div>
 
@@ -404,7 +348,7 @@
         <div id="tours" class="offers-section">
             <h2 class="section-title">✈️ رحلات سياحية منظمة</h2>
             <div class="cards-container">
-                <!-- بطاقات الرحلات (كما هي) -->
+                <!-- رحلة تدمر -->
                 <div class="card">
                     <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1591646934270-2515e0295a5c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
                         <div class="card-badge">شامل</div>
@@ -425,6 +369,7 @@
                     </div>
                 </div>
 
+                <!-- رحلة بصرى -->
                 <div class="card">
                     <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1568471252288-5e0d5f5d9c6c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
                         <div class="card-badge">عائلي</div>
@@ -445,6 +390,7 @@
                     </div>
                 </div>
 
+                <!-- جولة القلاع -->
                 <div class="card">
                     <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1590673846749-e2b8f5b6f3b1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
                         <div class="card-badge">مغامرة</div>
@@ -468,242 +414,242 @@
         </div>
     </main>
 
-            <!-- قسم من نحن - بتصميم جديد وجميل -->
-        <div id="about" class="about-section">
-            <div class="about-container">
-                <!-- معلومات عن الشركة -->
-                <div class="about-info">
-                    <h3>من نحن</h3>
-                    <div class="about-description">
-                        <p>شركة Vago هي منصة رائدة في مجال السياحة والسفر في سوريا، تأسست عام 2020 بهدف تقديم أفضل الخدمات السياحية بأسعار تنافسية وجودة عالية.</p>
-                        <p style="margin-top: 1rem;">نحن نؤمن بأن السفر يجب أن يكون تجربة ممتعة وخالية من المتاعب، لذلك نعمل جاهدين لتوفير كل ما يحتاجه السائح في مكان واحد.</p>
+    <!-- قسم من نحن -->
+    <div id="about" class="about-section">
+        <div class="about-container">
+            <!-- معلومات عن الشركة -->
+            <div class="about-info">
+                <h3>من نحن</h3>
+                <div class="about-description">
+                    <p>شركة Vago هي منصة رائدة في مجال السياحة والسفر في سوريا، تأسست عام 2020 بهدف تقديم أفضل الخدمات السياحية بأسعار تنافسية وجودة عالية.</p>
+                    <p style="margin-top: 1rem;">نحن نؤمن بأن السفر يجب أن يكون تجربة ممتعة وخالية من المتاعب، لذلك نعمل جاهدين لتوفير كل ما يحتاجه السائح في مكان واحد.</p>
+                </div>
+                
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">5000+</div>
+                        <div class="stat-label">عميل سعيد</div>
                     </div>
-                    
-                    <div class="about-stats">
-                        <div class="stat-item">
-                            <div class="stat-number">5000+</div>
-                            <div class="stat-label">عميل سعيد</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">150+</div>
-                            <div class="stat-label">فندق شريك</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">50+</div>
-                            <div class="stat-label">مدينة</div>
-                        </div>
+                    <div class="stat-item">
+                        <div class="stat-number">150+</div>
+                        <div class="stat-label">فندق شريك</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">مدينة</div>
                     </div>
                 </div>
+            </div>
 
-                <!-- مميزاتنا -->
-                <div class="about-features">
-                    <h3 style="font-size: 1.8rem; margin-bottom: 1.5rem;">لماذا Vago؟</h3>
-                    <div class="features-grid">
-                        <div class="feature">
-                            <div class="feature-icon">💰</div>
-                            <h4>أفضل الأسعار</h4>
-                            <p>نضمن لك أقل الأسعار في السوق</p>
-                        </div>
-                        <div class="feature">
-                            <div class="feature-icon">🛡️</div>
-                            <h4>خدمة موثوقة</h4>
-                            <p>جميع خدماتنا مضمونة وموثقة</p>
-                        </div>
-                        <div class="feature">
-                            <div class="feature-icon">⏰</div>
-                            <h4>دعم 24/7</h4>
-                            <p>فريق دعم جاهز لمساعدتك</p>
-                        </div>
-                        <div class="feature">
-                            <div class="feature-icon">🌟</div>
-                            <h4>جودة عالية</h4>
-                            <p>نختار أفضل الشركاء لنضمن رضاك</p>
-                        </div>
+            <!-- مميزاتنا -->
+            <div class="about-features">
+                <h3 style="font-size: 1.8rem; margin-bottom: 1.5rem;">لماذا Vago؟</h3>
+                <div class="features-grid">
+                    <div class="feature">
+                        <div class="feature-icon">💰</div>
+                        <h4>أفضل الأسعار</h4>
+                        <p>نضمن لك أقل الأسعار في السوق</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">🛡️</div>
+                        <h4>خدمة موثوقة</h4>
+                        <p>جميع خدماتنا مضمونة وموثقة</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">⏰</div>
+                        <h4>دعم 24/7</h4>
+                        <p>فريق دعم جاهز لمساعدتك</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">🌟</div>
+                        <h4>جودة عالية</h4>
+                        <p>نختار أفضل الشركاء لنضمن رضاك</p>
                     </div>
                 </div>
+            </div>
 
-                <!-- رسالتنا ورؤيتنا -->
-                <div class="about-mission">
-                    <h3>شركة Vago لخدمة السياح بأفضل الأسعار وأفضل راحة للسائح</h3>
-                    <p>نحن نسعى لجعل كل رحلة مع Vago تجربة لا تنسى، من خلال توفير خدمات متكاملة تجمع بين الجودة والسعر المناسب والراحة التامة. مع Vago، سفرك أصبح أسهل!</p>
-                </div>
+            <!-- رسالتنا ورؤيتنا -->
+            <div class="about-mission">
+                <h3>شركة Vago لخدمة السياح بأفضل الأسعار وأفضل راحة للسائح</h3>
+                <p>نحن نسعى لجعل كل رحلة مع Vago تجربة لا تنسى، من خلال توفير خدمات متكاملة تجمع بين الجودة والسعر المناسب والراحة التامة. مع Vago، سفرك أصبح أسهل!</p>
             </div>
         </div>
+    </div>
 
-                <!-- قسم خدماتنا -->
-        <div id="services" class="services-section">
-            <div class="services-header">
-                <h2>⚙️ خدماتنا المتميزة</h2>
-                <p>نقدم لكم مجموعة متكاملة من الخدمات السياحية لتجعل رحلتكم مع Vago تجربة لا تنسى</p>
+    <!-- قسم خدماتنا -->
+    <div id="services" class="services-section">
+        <div class="services-header">
+            <h2>⚙️ خدماتنا المتميزة</h2>
+            <p>نقدم لكم مجموعة متكاملة من الخدمات السياحية لتجعل رحلتكم مع Vago تجربة لا تنسى</p>
+        </div>
+        
+        <div class="services-grid">
+            <!-- خدمة 1: حجز الفنادق -->
+            <div class="service-card">
+                <div class="service-icon">🏨</div>
+                <h3>حجز الفنادق</h3>
+                <p>أكثر من 150 فندق في جميع المحافظات السورية، بأسعار تنافسية وجودة عالية</p>
+                <a href="#hotels" class="service-link">استعرض الفنادق</a>
             </div>
-            
-            <div class="services-grid">
-                <!-- خدمة 1: حجز الفنادق -->
-                <div class="service-card">
-                    <div class="service-icon">🏨</div>
-                    <h3>حجز الفنادق</h3>
-                    <p>أكثر من 150 فندق في جميع المحافظات السورية، بأسعار تنافسية وجودة عالية</p>
-                    <a href="#hotels" class="service-link">استعرض الفنادق</a>
-                </div>
 
-                <!-- خدمة 2: تأجير السيارات -->
-                <div class="service-card">
-                    <div class="service-icon">🚗</div>
-                    <h3>تأجير السيارات</h3>
-                    <p>أسطول متنوع من السيارات الاقتصادية والفاخرة مع خدمة التوصيل للمطار والفنادق</p>
-                    <a href="#cars" class="service-link">استعرض السيارات</a>
-                </div>
+            <!-- خدمة 2: تأجير السيارات -->
+            <div class="service-card">
+                <div class="service-icon">🚗</div>
+                <h3>تأجير السيارات</h3>
+                <p>أسطول متنوع من السيارات الاقتصادية والفاخرة مع خدمة التوصيل للمطار والفنادق</p>
+                <a href="#cars" class="service-link">استعرض السيارات</a>
+            </div>
 
-                <!-- خدمة 3: خدمات التكسي -->
-                <div class="service-card">
-                    <div class="service-icon">🚕</div>
-                    <h3>خدمات التكسي</h3>
-                    <p>شوفير خاص، تكسي مطار، ليموزين فاخر للمناسبات - خدمة 24 ساعة</p>
-                    <a href="#taxi" class="service-link">احجز تكسي</a>
-                </div>
+            <!-- خدمة 3: خدمات التكسي -->
+            <div class="service-card">
+                <div class="service-icon">🚕</div>
+                <h3>خدمات التكسي</h3>
+                <p>شوفير خاص، تكسي مطار، ليموزين فاخر للمناسبات - خدمة 24 ساعة</p>
+                <a href="#taxi" class="service-link">احجز تكسي</a>
+            </div>
 
-                <!-- خدمة 4: المطاعم -->
-                <div class="service-card">
-                    <div class="service-icon">🍽️</div>
-                    <h3>حجز المطاعم</h3>
-                    <p>أشهر المطاعم في سوريا، من المأكولات الشرقية إلى العالمية، مع عروض خاصة</p>
-                    <a href="#restaurants" class="service-link">اكتشف المطاعم</a>
-                </div>
+            <!-- خدمة 4: المطاعم -->
+            <div class="service-card">
+                <div class="service-icon">🍽️</div>
+                <h3>حجز المطاعم</h3>
+                <p>أشهر المطاعم في سوريا، من المأكولات الشرقية إلى العالمية، مع عروض خاصة</p>
+                <a href="#restaurants" class="service-link">اكتشف المطاعم</a>
+            </div>
 
-                <!-- خدمة 5: الرحلات السياحية -->
-                <div class="service-card">
-                    <div class="service-icon">✈️</div>
-                    <h3>رحلات سياحية</h3>
-                    <p>رحلات منظمة مع مرشدين محترفين لزيارة أجمل المواقع الأثرية في سوريا</p>
-                    <a href="#tours" class="service-link">استعرض الرحلات</a>
-                </div>
+            <!-- خدمة 5: الرحلات السياحية -->
+            <div class="service-card">
+                <div class="service-icon">✈️</div>
+                <h3>رحلات سياحية</h3>
+                <p>رحلات منظمة مع مرشدين محترفين لزيارة أجمل المواقع الأثرية في سوريا</p>
+                <a href="#tours" class="service-link">استعرض الرحلات</a>
+            </div>
 
-                <!-- خدمة 6: دعم العملاء -->
-                <div class="service-card">
-                    <div class="service-icon">🎧</div>
-                    <h3>دعم العملاء</h3>
-                    <p>فريق دعم متكامل على مدار الساعة للرد على استفساراتكم وحل أي مشكلة</p>
-                    <a href="#" class="service-link">اتصل بنا</a>
-                </div>
+            <!-- خدمة 6: دعم العملاء -->
+            <div class="service-card">
+                <div class="service-icon">🎧</div>
+                <h3>دعم العملاء</h3>
+                <p>فريق دعم متكامل على مدار الساعة للرد على استفساراتكم وحل أي مشكلة</p>
+                <a href="#" class="service-link">اتصل بنا</a>
+            </div>
 
-                <!-- خدمة 7: تأمين سفر -->
-                <div class="service-card">
-                    <div class="service-icon">🛡️</div>
-                    <h3>تأمين سفر</h3>
-                    <p>وثائق تأمين شاملة تغطي جميع مخاطر السفر لرحلتك بأمان</p>
-                    <a href="#" class="service-link">استعلم عن التأمين</a>
-                </div>
+            <!-- خدمة 7: تأمين سفر -->
+            <div class="service-card">
+                <div class="service-icon">🛡️</div>
+                <h3>تأمين سفر</h3>
+                <p>وثائق تأمين شاملة تغطي جميع مخاطر السفر لرحلتك بأمان</p>
+                <a href="#" class="service-link">استعلم عن التأمين</a>
+            </div>
 
-                <!-- خدمة 8: استشارات سياحية -->
-                <div class="service-card">
-                    <div class="service-icon">💡</div>
-                    <h3>استشارات سياحية</h3>
-                    <p>نصائح وإرشادات سياحية من خبراء السفر لتنظيم رحلتك المثالية</p>
-                    <a href="#" class="service-link">استشر خبير</a>
-                </div>
+            <!-- خدمة 8: استشارات سياحية -->
+            <div class="service-card">
+                <div class="service-icon">💡</div>
+                <h3>استشارات سياحية</h3>
+                <p>نصائح وإرشادات سياحية من خبراء السفر لتنظيم رحلتك المثالية</p>
+                <a href="#" class="service-link">استشر خبير</a>
             </div>
         </div>
+    </div>
 
-                <!-- قسم اتصل بنا -->
-        <div id="contact" class="contact-section">
-            <div class="contact-header">
-                <h2>📞 اتصل بنا</h2>
-                <p>نحن هنا لخدمتك على مدار الساعة، تواصل معنا عبر أي من وسائل الاتصال التالية</p>
-            </div>
-            
-            <div class="contact-container">
-                <!-- معلومات الاتصال -->
-                <div class="contact-info">
-                    <h3>معلومات الاتصال</h3>
-                    
-                    <div class="contact-details">
-                        <!-- رقم الموبايل -->
-                        <div class="contact-item">
-                            <div class="contact-icon">📱</div>
-                            <div class="contact-text">
-                                <h4>رقم الموبايل</h4>
-                                <p><a href="tel:+963987654321">+963 987 654 321</a></p>
-                                <p style="font-size: 0.9rem; opacity: 0.8;">متاح 24/7</p>
-                            </div>
-                        </div>
-
-                        <!-- واتساب -->
-                        <div class="contact-item">
-                            <div class="contact-icon">💬</div>
-                            <div class="contact-text">
-                                <h4>واتساب</h4>
-                                <p><a href="https://wa.me/963987654321" target="_blank">+963 987 654 321</a></p>
-                                <p style="font-size: 0.9rem; opacity: 0.8;">رد فوري</p>
-                            </div>
-                        </div>
-
-                        <!-- البريد الإلكتروني -->
-                        <div class="contact-item">
-                            <div class="contact-icon">✉️</div>
-                            <div class="contact-text">
-                                <h4>البريد الإلكتروني</h4>
-                                <p><a href="mailto:info@vago.com">info@vago.com</a></p>
-                                <p><a href="mailto:support@vago.com">support@vago.com</a></p>
-                            </div>
-                        </div>
-
-                        <!-- العنوان -->
-                        <div class="contact-item">
-                            <div class="contact-icon">📍</div>
-                            <div class="contact-text">
-                                <h4>العنوان</h4>
-                                <p>شارع بغداد، بناء الشام</p>
-                                <p>دمشق، سوريا</p>
-                            </div>
+    <!-- قسم اتصل بنا -->
+    <div id="contact" class="contact-section">
+        <div class="contact-header">
+            <h2>📞 اتصل بنا</h2>
+            <p>نحن هنا لخدمتك على مدار الساعة، تواصل معنا عبر أي من وسائل الاتصال التالية</p>
+        </div>
+        
+        <div class="contact-container">
+            <!-- معلومات الاتصال -->
+            <div class="contact-info">
+                <h3>معلومات الاتصال</h3>
+                
+                <div class="contact-details">
+                    <!-- رقم الموبايل -->
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <div class="contact-text">
+                            <h4>رقم الموبايل</h4>
+                            <p><a href="tel:+963987654321">+963 987 654 321</a></p>
+                            <p style="font-size: 0.9rem; opacity: 0.8;">متاح 24/7</p>
                         </div>
                     </div>
 
-                    <!-- أيقونات التواصل الاجتماعي -->
-                    <div class="social-media">
-                        <h4>تابعنا على</h4>
-                        <div class="social-icons">
-                            <a href="https://wa.me/963987654321" target="_blank" class="social-icon" title="واتساب">
-                                <i class="fab fa-whatsapp"></i>
-                            </a>
-                            <a href="https://instagram.com/vago.syria" target="_blank" class="social-icon" title="انستغرام">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="https://facebook.com/vago.syria" target="_blank" class="social-icon" title="فيسبوك">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="https://t.me/vago_syria" target="_blank" class="social-icon" title="تيليغرام">
-                                <i class="fab fa-telegram-plane"></i>
-                            </a>
+                    <!-- واتساب -->
+                    <div class="contact-item">
+                        <div class="contact-icon">💬</div>
+                        <div class="contact-text">
+                            <h4>واتساب</h4>
+                            <p><a href="https://wa.me/963987654321" target="_blank">+963 987 654 321</a></p>
+                            <p style="font-size: 0.9rem; opacity: 0.8;">رد فوري</p>
+                        </div>
+                    </div>
+
+                    <!-- البريد الإلكتروني -->
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div class="contact-text">
+                            <h4>البريد الإلكتروني</h4>
+                            <p><a href="mailto:info@vago.com">info@vago.com</a></p>
+                            <p><a href="mailto:support@vago.com">support@vago.com</a></p>
+                        </div>
+                    </div>
+
+                    <!-- العنوان -->
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-text">
+                            <h4>العنوان</h4>
+                            <p>شارع بغداد، بناء الشام</p>
+                            <p>دمشق، سوريا</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- نموذج الاتصال -->
-                <div class="contact-form">
-                    <h3>أرسل لنا رسالة</h3>
-                    
-                    <form action="#" method="post">
-                        <div class="form-group">
-                            <input type="text" placeholder="الاسم الكامل" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <input type="email" placeholder="البريد الإلكتروني" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <input type="tel" placeholder="رقم الموبايل">
-                        </div>
-                        
-                        <div class="form-group">
-                            <textarea placeholder="رسالتك..." required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="submit-btn">إرسال الرسالة</button>
-                    </form>
+                <!-- أيقونات التواصل الاجتماعي -->
+                <div class="social-media">
+                    <h4>تابعنا على</h4>
+                    <div class="social-icons">
+                        <a href="https://wa.me/963987654321" target="_blank" class="social-icon" title="واتساب">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://instagram.com/vago.syria" target="_blank" class="social-icon" title="انستغرام">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://facebook.com/vago.syria" target="_blank" class="social-icon" title="فيسبوك">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://t.me/vago_syria" target="_blank" class="social-icon" title="تيليغرام">
+                            <i class="fab fa-telegram-plane"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
+
+            <!-- نموذج الاتصال -->
+            <div class="contact-form">
+                <h3>أرسل لنا رسالة</h3>
+                
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <input type="text" placeholder="الاسم الكامل" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="email" placeholder="البريد الإلكتروني" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="tel" placeholder="رقم الموبايل">
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea placeholder="رسالتك..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">إرسال الرسالة</button>
+                </form>
+            </div>
         </div>
+    </div>
 
     <!-- زر العودة للأعلى -->
     <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
@@ -719,6 +665,7 @@
             </div>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>
